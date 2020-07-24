@@ -48,6 +48,14 @@
                        placeholder="some@some.com"/>
             </div>
         </div>
+            <div class="col-sm-5">
+                <div class="g-recaptcha" data-sitekey="6Le9mrUZAAAAAO9RwjoWoraBEDCuTNIWXOT__VFD"></div>
+                <#if captchaError??>
+                    <div class="alert alert-danger" role="alert">
+                        ${captchaError}
+                    </div>
+                </#if>
+            </div>
         </#if>
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
         <#if !isRegisterForm>
